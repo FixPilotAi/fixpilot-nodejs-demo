@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FixPilot Calculator</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/calculator.js" defer></script>
+  </head>
+  <body>
+    <main class="calculator">
+      <h1>FixPilot Calculator</h1>
+      <p>Enter two numbers and choose an operation.</p>
+
+      <form id="calculatorForm" novalidate>
+        <div class="field">
+          <label for="firstNumber">First number</label>
+          <input id="firstNumber" name="firstNumber" type="text" inputmode="decimal" autocomplete="off">
+        </div>
+
+        <div class="field">
+          <label for="secondNumber">Second number</label>
+          <input id="secondNumber" name="secondNumber" type="text" inputmode="decimal" autocomplete="off">
+        </div>
+
+        <div class="field">
+          <label for="operation">Operation</label>
+          <select id="operation" name="operation">
+            <option value="add">Addition</option>
+            <option value="subtract">Subtraction</option>
+            <option value="multiply">Multiplication</option>
+            <option value="divide">Division</option>
+          </select>
+        </div>
+
+        <div class="actions">
+          <button id="calculateButton" type="submit">Calculate</button>
+          <button id="clearButton" type="button">Clear</button>
+        </div>
+      </form>
+
+      <p id="errorMessage" class="error" role="alert" aria-live="assertive"></p>
+      <p class="result-line">Result: <output id="result" aria-live="polite"></output></p>
+    </main>
+  </body>
+</html>
