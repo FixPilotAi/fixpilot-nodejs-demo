@@ -1,0 +1,12 @@
+{
+  "name": "fixpilot-nodejs-demo",
+  "version": "1.0.0",
+  "description": "A minimal Express application for FixPilot validation.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
