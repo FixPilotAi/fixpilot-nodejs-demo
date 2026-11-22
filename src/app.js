@@ -43,6 +43,12 @@ app.get('/calculate/subtract', (req, res) => {
   res.json({ operation: 'subtract', result: calculator.subtract(operands.a, operands.b) });
 });
 
+app.get('/calculate/multiply', (req, res) => {
+  const operands = readOperands(req, res);
+  if (!operands) return;
+  res.json({ operation: 'multiply', result: calculator.multiply(operands.a, operands.b) });
+});
+
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
